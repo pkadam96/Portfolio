@@ -1,12 +1,12 @@
 let btn = document.getElementById("button");
 btn.addEventListener("click", async () => {  
     let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
+    downloadLink.href = "https://drive.google.com/file/d/1J4y7tpDi5F2Wl2JOfy44N17CJCimTvOh/view?usp=sharing";
     downloadLink.target = "_blank";
     downloadLink.click();
 
     let viewLink = document.createElement("a");
-    viewLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
+    viewLink.href = "https://drive.google.com/file/d/1J4y7tpDi5F2Wl2JOfy44N17CJCimTvOh/view?usp=sharing";
     viewLink.target = "_blank";
     viewLink.click();
 });
@@ -14,12 +14,12 @@ btn.addEventListener("click", async () => {
 let resumeDownload = document.getElementById("resumeDownload");
 resumeDownload.addEventListener("click", async () => {  
     let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
+    downloadLink.href = "https://drive.google.com/file/d/1J4y7tpDi5F2Wl2JOfy44N17CJCimTvOh/view?usp=sharing";
     downloadLink.target = "_blank";
     downloadLink.click();
 
     let viewLink = document.createElement("a");
-    viewLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
+    viewLink.href = "https://drive.google.com/file/d/1J4y7tpDi5F2Wl2JOfy44N17CJCimTvOh/view?usp=sharing";
     viewLink.target = "_blank";
     viewLink.click();
 });
@@ -39,7 +39,7 @@ document.getElementById("socialbook_git").addEventListener("click",()=>{
 })
 
 document.getElementById("socialbook_deployed").addEventListener("click",()=>{
-    window.open("https://65b229c4f0cb7b44e069b16c--loquacious-cranachan-383871.netlify.app/")
+    window.open("https://65b3b8e204290b1364f59ec6--stellar-zuccutto-405802.netlify.app/")
 })
 
 document.getElementById("reliance_git").addEventListener("click",()=>{
