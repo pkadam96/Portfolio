@@ -1,7 +1,7 @@
 let btn = document.getElementById("button");
 btn.addEventListener("click", async () => {  
     let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=download";
+    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
     downloadLink.target = "_blank";
     downloadLink.click();
 
@@ -14,7 +14,7 @@ btn.addEventListener("click", async () => {
 let resumeDownload = document.getElementById("resumeDownload");
 resumeDownload.addEventListener("click", async () => {  
     let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=download";
+    downloadLink.href = "https://drive.google.com/file/d/1ynW2SUjpwKsyuA-e4FFQMPxlIAHNPuPZ/view?usp=sharing";
     downloadLink.target = "_blank";
     downloadLink.click();
 
