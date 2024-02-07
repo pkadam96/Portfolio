@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <title>Pranoti Kadam</title> 
-    <link rel="stylesheet" href="index.css" />
-    <script src="./src/nav.js"></script>
+    <title>Pranoti Kadam</title>
+    <link rel="stylesheet" href="styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
 </head>
@@ -26,10 +25,12 @@
             <li class="Checkboxbtn"><a href="#projectt">Project</a></li>
             <li class="Checkboxbtn"><a href="#contact">Contact Me</a></li>
             <li>
-                <a id="resumeDownload" style="cursor: pointer;">Resume</a>
+                <a id="resumeDownload" style="cursor: pointer;">Resume</a> 
             </li>
         </ul>
     </nav>
+
+    <!----------------- Header ----------------->
     <div id="homepage" class="bg">
         <div id="image">
             <img data-aos="zoom-in" src="images/photo.png" alt="" />
@@ -44,11 +45,11 @@
                 knowledge to build world-class websites, contributing to the organization in achieving its functional
                 goals.
             </p>
-            <button id="button" id="Resume_btn" class="glow-on-hover">Resume </button>
-            <!-- <i class="fa-solid fa-download"></i> -->
+            <button id="button" id="Resume_btn" class="glow-on-hover">Resume <i class="fa-solid fa-download"></i></button>
         </div>
     </div>
 
+    <!----------------- Skills ----------------->
     <h1 style="margin-top: 50px" class="techSkillName">Techinal Skills</h1>
     <div id="new-skils">
         <div data-aos="flip-left" data-aos-delay="20">
@@ -94,6 +95,7 @@
         </div>
     </div>
 
+    <!----------------- Tools ----------------->
     <h1 id="tools" style="margin-top: 50px" class="techSkillName">Tools</h1>
     <div id="new-tools">
         <div data-aos="flip-left" data-aos-delay="20">
@@ -117,8 +119,8 @@
             <p>NPM</p>
         </div>
     </div>
-    </div>
 
+    <!----------------- Projects ----------------->
     <div id="projectt"></div>
     <div id="project">
         <h1>Projects</h1>
@@ -205,7 +207,8 @@
                 <div class="project_discription">
                     <h3>Reliance Digital Clone</h3>
                     <h4>
-                        Landing page replica of Reliance Digital, mirroring the original's design and functionality for a user-friendly introduction to the brand's electronic products and services.
+                        Landing page replica of Reliance Digital, mirroring the original's design and functionality for
+                        a user-friendly introduction to the brand's electronic products and services.
                     </h4>
                     <div class="techstack">
                         <p>HTML</p>
@@ -234,66 +237,26 @@
                         <button id="reliance_deployed">Deployed</button>
                     </div>
                 </div>
-            </div>
-            <!-- 4rd -->
-          
-            <!-- 5nd -->
-
-            <!-- 5th -->
-
+            </div>        
         </div>
-
-
     </div>
-
+    
+    <!----------------- Contact ----------------->
     <div id="contact">
         <div>
-          <h1>Contact</h1>
-          <h3><i class="fa-solid fa-phone"></i>  Mobile No. - 9922929800</h3>
-          <h3><i class="fa-solid fa-envelope"></i>  Email - pranotikadam96@gmail.com</h3>
-          <h3><i class="fa-solid fa-location-dot"></i>  Address - Pune Maharashtra</h3>
-          <div>
-            <img id="linkedinprofile" src="images/linkedin.png" alt="" />
-            <img id="githubprofile" src="images/github.png" alt="" />
-          </div>
+            <h1>Contact</h1>
+            <h3><i class="fa-solid fa-phone"></i> Mobile No. - +91 9922929800</h3>
+            <h3><i class="fa-solid fa-envelope"></i> Email - pranotikadam96@gmail.com</h3>
+            <h3><i class="fa-solid fa-location-dot"></i> Address - Pune, Maharashtra</h3>
+            <div>
+                <img id="linkedinprofile" src="images/linkedin.png" alt="" />
+                <img id="githubprofile" src="images/github.png" alt="" />
+            </div>
         </div>
-      </div>
     </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="index.js"></script>
 </body>
-
 </html>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-
-
-
-<script src="./src/resume.js"></script>
-
-
-<!-- Include the library. -->
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
-
-<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
-
-<!-- Prepare a container for your calendar. -->
-
-
-<script>
-    // GitHubCalendar(".calendar", "kishordmane");
-
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "kishordmane", { responsive: true });
-
-    // Use a proxy
-    // GitHubCalendar(".calendar", "kishordmane", {
-    //    proxy (username) {
-    //      return fetch(`https://your-proxy.com/github?user=${kishordmane}`)
-    //    }
-    // }).then(r => r.text())
-</script>
