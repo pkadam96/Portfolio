@@ -8,8 +8,10 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <title>Pranoti Kadam</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/a88c1550a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 
 <body>
@@ -17,86 +19,110 @@
         <div class="logo"><img src="images/Pranoti.png" alt="" /></div>
         <input type="checkbox" id="click" />
         <label for="click" class="menu-btn">
-            <img src="images/menu.png" alt="" />
+            <img src="images/menubar.png" alt="" />
         </label>
         <ul>
-            <li for="click" id="Hidebtn" class="Checkboxbtn"><a class="active" href="#homepage">Home</a></li>
-            <li class="Checkboxbtn"><a href="#button">Skills</a></li>
-            <li class="Checkboxbtn"><a href="#projectt">Project</a></li>
-            <li class="Checkboxbtn"><a href="#contact">Contact Me</a></li>
+            <li for="click" id="Hidebtn"><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#technical-skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
-                <a id="resumeDownload" style="cursor: pointer;">Resume</a> 
+                <a id="resumeDownload" style="cursor: pointer;">Resume</a>
             </li>
         </ul>
     </nav>
 
     <!----------------- Header ----------------->
-    <div id="homepage" class="bg">
+    <div id="home">
         <div id="image">
-            <img data-aos="zoom-in" src="images/photo.png" alt="" />
+            <img data-aos="zoom-in" src="images/avatar.png" alt="" />
         </div>
-        <div id="name">
-            <h1 data-aos="zoom-in-up">Hi,</h1>
-            <h1>I'm Pranoti Kadam</h1>
-            <h1>Web Developer</h1>
-            <p>
-                An enthusiastic web developer, Posses knowledge of HTML, CSS, and JavaScript. Exhibit a high
-                adaptability to quickly learn new technologies and pay attention to details. Aim is to leverage
-                knowledge to build world-class websites, contributing to the organization in achieving its functional
-                goals.
+        <div id="home-content">
+            <h2 data-aos="zoom-in-up">Hello, My name is</h2>
+            <h1 data-aos="zoom-in-up">Pranoti <span id="surname">Kadam</span></h1>
+            <p data-aos="zoom-in-up">A passionate <b class="typedText">Full Stack Developer</b>
             </p>
-            <button id="button" id="Resume_btn" class="glow-on-hover">Resume <i class="fa-solid fa-download"></i></button>
+            <button data-aos="zoom-in" class="glow-on-hover"><a href="#about">ABOUT ME</a></button>
         </div>
     </div>
 
+    <div id="about">
+        <div>
+            <div id="about-img">
+                <div class="rectangle"></div>
+                <img data-aos="zoom-in" src="images/photo.png" alt="profile-pic" />
+            </div>
+            <div id="about-content">
+                <h3 data-aos="zoom-in-up">ABOUT ME</h3>
+                <h1 data-aos="zoom-in-up">Full Stack Developer from Pune, Maharashtra</h1>
+                <p data-aos="zoom-in-up">Dynamic and adaptable Full Stack Web Developer
+                    proficient in the MERN stack. Skilled in crafting
+                    innovative solutions through solo and collaborative
+                    project development. Detail-oriented with strong
+                    problem-solving abilities, committed to delivering
+                    high-quality code within deadlines. Proficient in
+                    Node.js, Express.js, React.js, MongoDB, RESTful API
+                    design and development. Familiar with HTML, CSS,
+                    Git, and collaborative development workflows.
+                    Excellent communication and collaboration skills in
+                    team environments. Proactive and self-motivated.</p>
+                <button data-aos="zoom-in-up" class="glow-on-hover" id="button" id="Resume_btn">Resume <i
+                        class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </div>
+    </div>
     <!----------------- Skills ----------------->
-    <h1 style="margin-top: 50px" class="techSkillName">Techinal Skills</h1>
-    <div id="new-skils">
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/html_1051277.png" alt="">
-            <p>HTML</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/social_11516361.png" alt="" />
-            <p>CSS</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/sass-logo.png" alt="" />
-            <p>SaSS</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/js_5968292.png" alt="" />
-            <p>JavaScript</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/bootstrap-stack.png" alt="" />
-            <p>Bootstrap</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/tailwind.png" alt="" />
-            <p>Tailwind</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/react.png" alt="" />
-            <p>ReactJs</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/mysql.png" alt="" />
-            <p>MySQL</p>
-        </div>
+    <div id="technical-skills">
+        <h3 class="techSkillName">TECHNICAL SKILLS</h3>
+        <div class="skills">
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/html_1051277.png" alt="">
+                <p>HTML</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/social_11516361.png" alt="" />
+                <p>CSS</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/sass-logo.png" alt="" />
+                <p>SaSS</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/js_5968292.png" alt="" />
+                <p>JavaScript</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/bootstrap-stack.png" alt="" />
+                <p>Bootstrap</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/tailwind.png" alt="" />
+                <p>Tailwind</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/react.png" alt="" />
+                <p>ReactJs</p>
+            </div>
+            <div data-aos="flip-left" style="margin-top: -10px;" data-aos-delay="20">
+                <img src="images/node.png" alt="" />
+                <p>NodeJs</p>
+            </div>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/mysql.png" alt="" />
+                <p>MySQL</p>
+            </div>
 
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/mongodb-.svg" alt="" />
-            <p>MongoDB</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/oracle-1024x576.png" alt="" style="height: 90%; margin-top: 10%;" />
-            <p>Oracle</p>
+            <div data-aos="flip-left" data-aos-delay="20">
+                <img src="images/mongodb-.svg" alt="" />
+                <p>MongoDB</p>
+            </div>
         </div>
     </div>
 
     <!----------------- Tools ----------------->
-    <h1 id="tools" style="margin-top: 50px" class="techSkillName">Tools</h1>
+    <!-- <h1 id="tools" style="margin-top: 50px" class="techSkillName">Tools</h1>
     <div id="new-tools">
         <div data-aos="flip-left" data-aos-delay="20">
             <img src="images/github.png" alt="" />
@@ -118,145 +144,168 @@
             <img src="images/npm-logo.png" alt="" />
             <p>NPM</p>
         </div>
-    </div>
+    </div> -->
 
     <!----------------- Projects ----------------->
-    <div id="projectt"></div>
     <div id="project">
-        <h1>Projects</h1>
-        <div class="project_div">
-            <!-- 1st -->
-            <div data-aos="fade-right" data-aos-delay="400">
-                <div class="project_img">
-                    <img src="images/syLoan.png" alt="" />
+        <div id="project-content">
+            <h3 class="techSkillName">PROJECTS</h3>
+            <div class="project_div">
+                <!-- 1st -->
+                <div data-aos="fade-right" data-aos-delay="400">
+                    <div class="project_img">
+                        <img src="images/syLoan.png" alt="" />
+                    </div>
+                    <div class="project_discription">
+                        <h3>SyLoan</h3>
+                        <h4>
+                            SyLoan is a user-friendly and versatile online platform that provides a seamless experience
+                            for
+                            individuals seeking various types of loans.
+                        </h4>
+                        <div class="techstack">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="features">
+                            <div>
+                                <b>Features:</b>
+                                <ul>
+                                    <li>Sign In/ Sign Up</li>
+                                    <li>Authentication</li>
+                                    <li>User Friendly UI</li>
+                                    <li>Responsive Design</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <b>Areas of Responsibility:</b>
+                                <ul>
+                                    <li>Sign In/ Sign Up</li>
+                                    <li>Landing Page</li>
+                                    <li>User Profile</li>
+                                    <li>Responsive Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="syLoan_git">Github</button>
+                            <button id="syLoan_deployed">Deployed</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="project_discription">
-                    <h3>SyLoan</h3>
-                    <h4>
-                        SyLoan is a user-friendly and versatile online platform that provides a seamless experience for
-                        individuals seeking various types of loans.
-                    </h4>
-                    <div class="techstack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JavaScript</p>
+                <!-- 2nd -->
+                <div data-aos="fade-left" data-aos-delay="400">
+                    <div class="project_img">
+                        <img src="images/socialbook.png" alt="" />
                     </div>
-                    <div class="features">
-                        <div>
-                            <b>Features:</b>
-                            <ul>
-                                <li>Sign In/ Sign Up</li>
-                                <li>Authentication</li>
-                                <li>User Friendly UI</li>
-                                <li>Responsive Design</li>
-                            </ul>
+                    <div class="project_discription">
+                        <h3>Socialbook</h3>
+                        <h4>
+                            Socialbook is a modern user interface for a social media website, enhancing user experience
+                            and
+                            engagement.
+                        </h4>
+                        <div class="techstack">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
                         </div>
-                        <div>
-                            <b>Areas of Responsibility:</b>
-                            <ul>
-                                <li>Sign In/ Sign Up</li>
-                                <li>Landing Page</li>
-                                <li>User Profile</li>
-                                <li>Responsive Design</li>
-                            </ul>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: small; margin-left: 20px; margin-top: 15px; width: 70%;">
+                            <div>
+                                <b>Features:</b>
+                                <ul>
+                                    <li>User Friendly UI</li>
+                                    <li>Dark Mode Option</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="socialbook_git">Github</button>
+                            <button id="socialbook_deployed">Deployed</button>
                         </div>
                     </div>
-                    <div class="buttons">
-                        <button id="syLoan_git">Github</button>
-                        <button id="syLoan_deployed">Deployed</button>
+                </div>
+                <!-- 3nd -->
+                <div data-aos="fade-right" data-aos-delay="400">
+                    <div class="project_img">
+                        <img src="images/relianceDigital.png" alt="" />
+                    </div>
+                    <div class="project_discription">
+                        <h3>Reliance Digital Clone</h3>
+                        <h4>
+                            Landing page replica of Reliance Digital, mirroring the original's design and functionality
+                            for
+                            a user-friendly introduction to the brand's electronic products and services.
+                        </h4>
+                        <div class="techstack">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; font-size: small; margin-left: 20px; margin-top: 15px; width: 70%;">
+                            <div>
+                                <b>Features:</b>
+                                <ul>
+                                    <li>Navigation Menu</li>
+                                    <li>Product Showcase</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <b>Areas of Responsibility:</b>
+                                <ul>
+                                    <li>Team Lead</li>
+                                    <li>Carousel Implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button id="reliance_git">Github</button>
+                            <button id="reliance_deployed">Deployed</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- 2nd -->
-            <div data-aos="fade-left" data-aos-delay="400">
-                <div class="project_img">
-                    <img src="images/socialbook.png" alt="" />
-                </div>
-                <div class="project_discription">
-                    <h3>Socialbook</h3>
-                    <h4>
-                        Socialbook is a modern user interface for a social media website, enhancing user experience and
-                        engagement.
-                    </h4>
-                    <div class="techstack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JavaScript</p>
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-between; font-size: small; margin-left: 20px; margin-top: 15px; width: 70%;">
-                        <div>
-                            <b>Features:</b>
-                            <ul>
-                                <li>User Friendly UI</li>
-                                <li>Dark Mode Option</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button id="socialbook_git">Github</button>
-                        <button id="socialbook_deployed">Deployed</button>
-                    </div>
-                </div>
-            </div>
-            <!-- 3nd -->
-            <div data-aos="fade-right" data-aos-delay="400">
-                <div class="project_img">
-                    <img src="images/relianceDigital.png" alt="" />
-                </div>
-                <div class="project_discription">
-                    <h3>Reliance Digital Clone</h3>
-                    <h4>
-                        Landing page replica of Reliance Digital, mirroring the original's design and functionality for
-                        a user-friendly introduction to the brand's electronic products and services.
-                    </h4>
-                    <div class="techstack">
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>Bootstrap</p>
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-between; font-size: small; margin-left: 20px; margin-top: 15px; width: 70%;">
-                        <div>
-                            <b>Features:</b>
-                            <ul>
-                                <li>Navigation Menu</li>
-                                <li>Product Showcase</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <b>Areas of Responsibility:</b>
-                            <ul>
-                                <li>Team Lead</li>
-                                <li>Carousel Implementation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button id="reliance_git">Github</button>
-                        <button id="reliance_deployed">Deployed</button>
-                    </div>
-                </div>
-            </div>        
         </div>
     </div>
-    
+
     <!----------------- Contact ----------------->
     <div id="contact">
-        <div>
-            <h1>Contact</h1>
-            <h3><i class="fa-solid fa-phone"></i> Mobile No. - +91 9922929800</h3>
-            <h3><i class="fa-solid fa-envelope"></i> Email - pranotikadam96@gmail.com</h3>
-            <h3><i class="fa-solid fa-location-dot"></i> Address - Pune, Maharashtra</h3>
-            <div>
-                <img id="linkedinprofile" src="images/linkedin.png" alt="" />
-                <img id="githubprofile" src="images/github.png" alt="" />
+        <h3 class="techSkillName">GET IN TOUCH</h3>
+        <div class="contact-content">
+            <div class="contacts">
+                <h3><i class="fa-solid fa-phone"></i> Mobile No. - +91 9922929800</h3>
+                <h3><i class="fa-solid fa-envelope"></i> Email - pranotikadam96@gmail.com</h3>
+                <h3><i class="fa-solid fa-location-dot" style="padding:15px 17px"></i> Address - Pune, Maharashtra</h3>
+                <div>
+                    <i id="linkedinprofile" class="fa-brands fa-linkedin fa-2xl"></i>
+                    <i id="githubprofile" class="fa-brands fa-github fa-2xl"></i>
+                </div>
             </div>
+            <div class="contact-form-container">
+                <form id="contactForm">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here" required></textarea>
+
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+
         </div>
-    </div>
+
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script>AOS.init();</script>
     <script src="index.js"></script>
 </body>
+
 </html>

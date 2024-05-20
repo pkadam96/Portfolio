@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll("nav ul li a");
+
+    function removeActiveClass() {
+        navLinks.forEach(function(link) {
+            link.classList.remove("active");
+        });
+    }
+
+    // Add click event listener to each link
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            removeActiveClass();
+            this.classList.add("active");
+        });
+    });
+});
+
 // Resume
 document.getElementById("button").addEventListener("click", async () => {
     let resumeURL = "https://raw.githubusercontent.com/pkadam96/MyResume/main/Pranoti_Kadam_Resume.pdf";
@@ -16,7 +34,7 @@ document.getElementById("button").addEventListener("click", async () => {
 let resumeDownload = document.getElementById("resumeDownload");
 resumeDownload.addEventListener("click", async () => {  
     let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/1B6-A9D6D7noa1ueGYOKBh2aiB8qKIZMJ/view?usp=sharing";
+    downloadLink.href = "https://drive.google.com/file/d/19EhnvOZAmEZ0IYT-Tx5wkCPNoVZIQAlQ/view?usp=sharing";
     downloadLink.target = "_blank";
     downloadLink.click();
 });
@@ -50,3 +68,46 @@ document.getElementById("githubprofile").addEventListener("click",()=>{
 document.getElementById("linkedinprofile").addEventListener("click",()=>{
     window.open("https://www.linkedin.com/in/pranoti-kadam-2b52a7217/")
 })
+
+ const sr = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2000,
+        reset: true     
+ })
+
+sr.reveal('.featured-name',{delay: 100})
+
+// scripts.js
+document.addEventListener('DOMContentLoaded', (event) => {
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    if (name === '' || email === '' || message === '') {
+        document.getElementById('formMessage').textContent = 'Please fill in all fields.';
+        return;
+    }
+
+    let templateParams = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    emailjs.send('service_3gjoyna', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            document.getElementById('formMessage').textContent = 'Message sent successfully!';
+            document.getElementById('contactForm').reset();
+        }, function(error) {
+            console.error('FAILED...', error);
+            document.getElementById('formMessage').textContent = 'Failed to send message.';
+        });
+});
