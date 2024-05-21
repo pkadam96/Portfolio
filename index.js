@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.querySelectorAll('ul li a').forEach(menuItem => {
+    menuItem.addEventListener('click', () => {
+        document.getElementById('click').checked = false;
+    });
+});
+
  const typedTextElement = document.getElementById("typed-text");
     const textArray = ["Full Stack Developer"];
     let arrayIndex = 0;
