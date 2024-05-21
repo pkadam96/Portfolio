@@ -22,59 +22,70 @@
             <img src="images/menubar.png" alt="" />
         </label>
         <ul>
-            <li for="click" id="Hidebtn"><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#technical-skills">Skills</a></li>
-            <li><a href="#project">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li for="click" id="Hidebtn">
+                <a href="#home" class="active">Home</a>
+            </li>
             <li>
-                <a id="resumeDownload" style="cursor: pointer;">Resume</a>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#technical-skills">Skills</a>
+            </li>
+            <li>
+                <a href="#project">Project</a>
+            </li>
+            <li>
+                <a href="#statistics">Statistics</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a class="Resume_btn" style="cursor: pointer;">Resume</a>
             </li>
         </ul>
     </nav>
 
     <!----------------- Header ----------------->
-    <div id="home">
+    <section id="home">
         <div id="image">
             <img data-aos="zoom-in" src="images/avatar.png" alt="" />
         </div>
         <div id="home-content">
             <h2 data-aos="zoom-in-up">Hello, My name is</h2>
-            <h1 data-aos="zoom-in-up">Pranoti <span id="surname">Kadam</span></h1>
-            <p data-aos="zoom-in-up">A passionate <b class="typedText">Full Stack Developer</b>
+            <h1 id="name" class="wave" data-aos="zoom-in-up">Pranoti <span>Kadam</span></h1>
+            <p data-aos="zoom-in-up">A passionate <b class="typedText" id="typed-text"></b>
             </p>
             <button data-aos="zoom-in" class="glow-on-hover"><a href="#about">ABOUT ME</a></button>
         </div>
-    </div>
+    </section>
 
-    <div id="about">
+    <section id="about">
         <div>
             <div id="about-img">
-                <div class="rectangle"></div>
                 <img data-aos="zoom-in" src="images/photo.png" alt="profile-pic" />
             </div>
             <div id="about-content">
                 <h3 data-aos="zoom-in-up">ABOUT ME</h3>
                 <h1 data-aos="zoom-in-up">Full Stack Developer from Pune, Maharashtra</h1>
                 <p data-aos="zoom-in-up">Dynamic and adaptable Full Stack Web Developer
-                    proficient in the MERN stack. Skilled in crafting
-                    innovative solutions through solo and collaborative
-                    project development. Detail-oriented with strong
-                    problem-solving abilities, committed to delivering
-                    high-quality code within deadlines. Proficient in
-                    Node.js, Express.js, React.js, MongoDB, RESTful API
-                    design and development. Familiar with HTML, CSS,
-                    Git, and collaborative development workflows.
-                    Excellent communication and collaboration skills in
-                    team environments. Proactive and self-motivated.</p>
-                <button data-aos="zoom-in-up" class="glow-on-hover" id="button" id="Resume_btn">Resume <i
-                        class="fa-solid fa-download"></i>
-                </button>
+                    proficient in the MERN stack. Skilled in crafting innovative solutions through solo and
+                    collaborative project development. Detail-oriented with strong problem-solving abilities, committed
+                    to delivering high-quality code within deadlines. Proficient in Node.js, Express.js React.js,
+                    MongoDB, RESTful API design and development. Familiar with HTML, CSS, Git, and collaborative
+                    development workflows. Excellent communication and collaboration skills in team environments.
+                    Proactive and self-motivated.</p>
+                    <button data-aos="zoom-in-up" class="Resume_btn" style="cursor: pointer;">
+                        Resume
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+                    
             </div>
         </div>
-    </div>
+    </section>
+    
     <!----------------- Skills ----------------->
-    <div id="technical-skills">
+    <section id="technical-skills">
         <h3 class="techSkillName">TECHNICAL SKILLS</h3>
         <div class="skills">
             <div data-aos="flip-left" data-aos-delay="20">
@@ -105,7 +116,7 @@
                 <img src="images/react.png" alt="" />
                 <p>ReactJs</p>
             </div>
-            <div data-aos="flip-left" style="margin-top: -10px;" data-aos-delay="20">
+            <div data-aos="flip-left" data-aos-delay="20">
                 <img src="images/node.png" alt="" />
                 <p>NodeJs</p>
             </div>
@@ -119,35 +130,10 @@
                 <p>MongoDB</p>
             </div>
         </div>
-    </div>
-
-    <!----------------- Tools ----------------->
-    <!-- <h1 id="tools" style="margin-top: 50px" class="techSkillName">Tools</h1>
-    <div id="new-tools">
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/github.png" alt="" />
-            <p>git hub</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/git.png" alt="" />
-            <p>git bash</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/vscode.9bc6e588b5f2b867a8a4.png" alt="" />
-            <p>VS Code</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/Google_Chrome_icon_(February_2022).svg.png" alt="" />
-            <p>Chrome</p>
-        </div>
-        <div data-aos="flip-left" data-aos-delay="20">
-            <img src="images/npm-logo.png" alt="" />
-            <p>NPM</p>
-        </div>
-    </div> -->
+    </section>
 
     <!----------------- Projects ----------------->
-    <div id="project">
+    <section id="project">
         <div id="project-content">
             <h3 class="techSkillName">PROJECTS</h3>
             <div class="project_div">
@@ -269,10 +255,21 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!----------------- Statistics ----------------->
+    <section id="statistics">
+        <h3 class="techSkillName">GITHUB STATS</h3>
+        <div class="github-stats">
+            <img src="https://github-readme-stats.vercel.app/api?username=pkadam96" alt="GitHub Profile Stats">
+            
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=pkadam96" alt="GitHub Streak Stats">
 
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pkadam96"
+                alt="Most Used Languages">
+        </div>
+    </section>
     <!----------------- Contact ----------------->
-    <div id="contact">
+    <section id="contact">
         <h3 class="techSkillName">GET IN TOUCH</h3>
         <div class="contact-content">
             <div class="contacts">
@@ -285,7 +282,8 @@
                 </div>
             </div>
             <div class="contact-form-container">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/xleqkdye" method="POST" autocomplete="off"
+                    name="google-sheet" id="contactForm">
                     <div>
                         <input type="text" id="name" name="name" placeholder="Name" required>
 
@@ -294,14 +292,14 @@
 
                     <textarea id="message" name="message" rows="5" placeholder="Your message here" required></textarea>
 
-                    <button type="submit">SEND MESSAGE</button>
+                    <button type="submit" onclick="submitForm()">SEND MESSAGE</button>
                 </form>
                 <div id="formMessage"></div>
             </div>
 
         </div>
 
-    </div>
+    </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script>AOS.init();</script>

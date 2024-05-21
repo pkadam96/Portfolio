@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Add click event listener to each link
     navLinks.forEach(function(link) {
         link.addEventListener("click", function() {
             removeActiveClass();
@@ -16,28 +15,77 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+ const typedTextElement = document.getElementById("typed-text");
+    const textArray = ["Full Stack Developer"];
+    let arrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[arrayIndex].length) {
+            typedTextElement.textContent += textArray[arrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 150);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextElement.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 100);
+        } else {
+            setTimeout(type, 500);
+        }
+    }
+
+    type();
+
+    const nameElement = document.getElementById('name');
+    const nameText = nameElement.textContent;
+    nameElement.innerHTML = '';
+
+    for (let i = 0; i < nameText.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = nameText[i];
+        nameElement.appendChild(span);
+    }
+
 // Resume
-document.getElementById("button").addEventListener("click", async () => {
-    let resumeURL = "https://raw.githubusercontent.com/pkadam96/MyResume/main/Pranoti_Kadam_Resume.pdf";
-    let response = await fetch(resumeURL);
-    let data = await response.blob();
-    let blob = new Blob([data], { type: response.headers.get("content-type") });
-    let downloadLink = document.createElement("a");
-    downloadLink.href = window.URL.createObjectURL(blob);
-    downloadLink.download = "Pranoti_Kadam_Resume.pdf";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+document.querySelectorAll(".Resume_btn").forEach(button => {
+    button.addEventListener("click", async () => {
+        let resumeURL = "https://raw.githubusercontent.com/pkadam96/MyResume/main/Pranoti_Kadam_Resume.pdf";
+        try {
+            let response = await fetch(resumeURL);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            let blob = await response.blob();
+            let downloadLink = document.createElement("a");
+            downloadLink.href = window.URL.createObjectURL(blob);
+            downloadLink.download = "Pranoti_Kadam_Resume.pdf";
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            window.URL.revokeObjectURL(downloadLink.href); // Clean up the URL object
+        } catch (error) {
+            console.error('There has been a problem with your fetch operation:', error);
+        }
+    });
 });
 
 
-let resumeDownload = document.getElementById("resumeDownload");
-resumeDownload.addEventListener("click", async () => {  
-    let downloadLink = document.createElement("a");
-    downloadLink.href = "https://drive.google.com/file/d/19EhnvOZAmEZ0IYT-Tx5wkCPNoVZIQAlQ/view?usp=sharing";
-    downloadLink.target = "_blank";
-    downloadLink.click();
+document.querySelectorAll(".Resume_btn").forEach(button => {
+    button.addEventListener("click", async () => {
+        let downloadLink = document.createElement("a");
+        downloadLink.href = "https://drive.google.com/file/d/19EhnvOZAmEZ0IYT-Tx5wkCPNoVZIQAlQ/view?usp=sharing";
+        downloadLink.target = "_blank";
+        downloadLink.click();
+    });
 });
+
+
 
 // Projects
 document.getElementById("syLoan_git").addEventListener("click",()=>{
@@ -69,45 +117,8 @@ document.getElementById("linkedinprofile").addEventListener("click",()=>{
     window.open("https://www.linkedin.com/in/pranoti-kadam-2b52a7217/")
 })
 
- const sr = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 2000,
-        reset: true     
- })
+function submitForm(){
+    document.getElementById("contactForm").submit();
+    document.getElementById("contactForm").reset();
+}
 
-sr.reveal('.featured-name',{delay: 100})
-
-// scripts.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
-});
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
-
-    if (name === '' || email === '' || message === '') {
-        document.getElementById('formMessage').textContent = 'Please fill in all fields.';
-        return;
-    }
-
-    let templateParams = {
-        name: name,
-        email: email,
-        message: message
-    };
-
-    emailjs.send('service_3gjoyna', 'YOUR_TEMPLATE_ID', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById('formMessage').textContent = 'Message sent successfully!';
-            document.getElementById('contactForm').reset();
-        }, function(error) {
-            console.error('FAILED...', error);
-            document.getElementById('formMessage').textContent = 'Failed to send message.';
-        });
-});

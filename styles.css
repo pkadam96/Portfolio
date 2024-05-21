@@ -47,7 +47,6 @@ nav ul li {
 nav ul li a:hover,
 nav ul li a.active,
 nav ul li a:focus {
-    color: rgb(9, 8, 8);
     color: #7371f9;
 }
 
@@ -72,13 +71,15 @@ nav .menu-btn {
 
 @media (max-width: 950px) {
 
-    nav .menu-btn img {
+    nav .menu-btn img{
         display: block;
         position: relative;
+        right: 0;
+        z-index: 1;
     }
-
+    
     nav .menu-btn {
-        width: 20%;
+        width: 100px;
         justify-content: center;
     }
 
@@ -137,6 +138,7 @@ nav .menu-btn {
 /* Homepage */
 
 #home {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -150,11 +152,23 @@ nav .menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    padding-top: 5%;
+    position: relative;
+    overflow: hidden;
 }
 
-#image>img {
+#image img {
     width: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 #home-content {
@@ -169,11 +183,8 @@ nav .menu-btn {
 #home-content h1 {
     font-size: 80px;
     color: white;
-    margin: 2% 0;
-}
-
-#home-content span {
-    color: #7371f9;
+    margin-top: 20px;
+    padding: 2% 0 1% 0;
 }
 
 #home-content>p {
@@ -199,7 +210,50 @@ nav .menu-btn {
 }
 
 #home-content>button:hover {
-    color: #ededf7;
+    background-color:#5552f6;
+}
+
+#typed-text::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.wave span {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+.wave span:nth-child(1) { animation-delay: 0s; }
+.wave span:nth-child(2) { animation-delay: 0.1s; }
+.wave span:nth-child(3) { animation-delay: 0.2s; }
+.wave span:nth-child(4) { animation-delay: 0.3s; }
+.wave span:nth-child(5) { animation-delay: 0.4s; }
+.wave span:nth-child(6) { animation-delay: 0.5s; }
+.wave span:nth-child(7) { animation-delay: 0.6s; }
+.wave span:nth-child(8) { animation-delay: 0.7s ;  margin-right: 20px; color: #7371f9;}
+.wave span:nth-child(9) { animation-delay: 0.8s; color: #7371f9;}
+.wave span:nth-child(10) { animation-delay: 0.9s; color: #7371f9;}
+.wave span:nth-child(11) { animation-delay: 1s; color: #7371f9;}
+.wave span:nth-child(12) { animation-delay: 1.1s; color: #7371f9;}
+.wave span:nth-child(13) { animation-delay: 1.2s; color: #7371f9;}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @media (max-width:940px) {
@@ -220,12 +274,7 @@ nav .menu-btn {
 
     #home-content h1 {
         font-size: 80px;
-        color: white;
         margin: 2% 0;
-    }
-
-    #home-content span {
-        color: #7371f9;
     }
 
     #home-content>p {
@@ -254,35 +303,27 @@ nav .menu-btn {
         margin: auto;
     }
 
-
     #home-content {
         padding: 0;
     }
 
     #home-content h2 {
-        color: white;
         margin-top: 25px;
     }
 
     #home-content h1 {
         font-size: 50px;
-        color: white;
         margin: 2% 0;
     }
-
-    #home-content span {
-        color: #7371f9;
+    #typed-text{
+        display: block;
     }
-
-    #home-content>p {
-        margin: 20px;
-        font-size: x-large;
-        color: #b0aac0;
-    }
+    
 }
 
 #about {
     background-color: #2a2a2a;
+    position: relative;
 }
 
 #about>div {
@@ -294,29 +335,23 @@ nav .menu-btn {
 
 #about-img {
     width: 100%;
+    display: flex;
+    align-items: center;
     position: relative;
+    display: inline-block;
 }
 
-/* 
-.rectangle {
-    position: absolute;
-    top: -10%;
-    right: 70%;
-    width: 100%;
-    height: 100%;
-    background-color:#7371f9;
-    border-radius: 5%;
-}  */
-
 #about-img img {
-    position: relative;
-    width: 65%;
+    width: 60%;
     border-radius: 5%;
+    padding: 20%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 #about-content {
     width: 100%;
-    height: auto;
     padding: 10% 0;
 }
 
@@ -327,7 +362,8 @@ nav .menu-btn {
 #about-content h1 {
     color: white;
     font-size: 45px;
-    margin: 10px 0;
+    margin: 20px 0;
+    border-bottom: 3px solid #7371f9;
 }
 
 #about-content p {
@@ -335,6 +371,7 @@ nav .menu-btn {
     font-size: large;
     margin: 10px 0;
     line-height: 30px;
+    text-align: justify;
 }
 
 #about-content button {
@@ -348,14 +385,36 @@ nav .menu-btn {
     border: none;
     font-weight: 700;
 }
+#about-content button:hover {
+    background-color:#5552f6;
+}
+
+#about-img::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+    height: 60%;
+    background: linear-gradient(45deg, #7371f9, #5e5da3);
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateBg 10s linear infinite;
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 
 @media (max-width:940px) {
     #about>div {
         padding: 0 3%;
-    }
-
-    #about-img {
-        margin-right: -70px;
     }
 
     #about-content h1 {
@@ -366,14 +425,11 @@ nav .menu-btn {
 @media (max-width:650px) {
     #about>div {
         flex-direction: column;
-    }
-
-    #about-img {
-        margin: 50px 0 0 35%;
+        margin: 10px;
     }
 
     #about-content h1 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     #about-content p {
@@ -383,11 +439,8 @@ nav .menu-btn {
 
 }
 
-/* skills */
-
 #technical-skills {
     background-color: #222222;
-    padding: 2%;
 }
 
 .techSkillName {
@@ -399,17 +452,16 @@ nav .menu-btn {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    overflow: hidden;
     gap: 20px;
     margin: 5% 8%;
+    overflow: hidden;
 }
 
-.skills>div>img {
-    width: 60%;
-    margin: auto;
-}
-
-.skills>div {
+.skills > div {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     display: flex;
     flex-direction: column;
@@ -420,8 +472,62 @@ nav .menu-btn {
     color: #7371f9;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 10%;
+    padding: 20% 10%;
 }
+
+.skills img {
+    width: 100px; 
+    height: 100px;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    animation: float 3s ease-in-out infinite;
+}
+
+.skills p {
+    margin-top: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Hover effects */
+.skills > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills > div:hover img {
+    transform: scale(1.1);
+}
+
+/* Color overlay on hover */
+.skills > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.skills > div:hover::before {
+    opacity: 1;
+}
+
 
 @media (max-width:940px) {
     .skills>div {
@@ -465,6 +571,7 @@ nav .menu-btn {
 .project_div>div {
     display: flex;
     justify-content: center;
+    gap: 3%;
     margin: auto;
     margin-top: 20px;
     padding: 6px;
@@ -555,6 +662,9 @@ nav .menu-btn {
 
 
 @media (max-width:940px) {
+    #project {    
+        padding: 5% 10%;
+    }
     .project_div>div {
         display: block;
     }
@@ -599,10 +709,39 @@ nav .menu-btn {
         width: 100%;
     }
 }
+/*statistics*/
+#statistics{
+    background-color: #222222;
+    padding: 5% 10%;
+}
+
+#statistics .techSkillName{
+    margin-bottom: 50px;
+}
+.github-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.github-stats img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 3px 6px, rgba(255, 255, 255, 0.23) 0px 3px 6px;
+    padding: 2px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.github-stats img:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+}
 
 /* contact */
 #contact {
-    background-color: #222222;
+    background-color:#2a2a2a;
     color: white;
     padding: 5% 10%;
 }
@@ -716,7 +855,10 @@ nav .menu-btn {
 }
 
 
-@media (max-width:450px) {
+@media (max-width:500px) {
+    .contact-content {
+        margin: 10px;
+    }
     .contact-form-container input {
         width: 90%;
     }
